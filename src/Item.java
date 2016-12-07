@@ -12,7 +12,7 @@ public class Item {
     private String name;
     private int quantity;
     private double price;
-    String foodGroup;
+    private String foodGroup;
     private Date saleStart = getValidDate("01/01/2000");
     private Date saleEnd = getValidDate("01/01/2000");
     private double salePrice;
@@ -34,10 +34,11 @@ public class Item {
         }
     }
 
-    public Item(String name, int quantity, double price){
+    public Item(String name, int quantity, double price, String foodGroup){
         this.name = name;
         this.quantity = quantity;
         this.price = price;
+        this.foodGroup = foodGroup;
     }
 
     @Override
@@ -107,6 +108,14 @@ public class Item {
 
     public void setSalePrice(double salePrice) {
         this.salePrice = salePrice;
+    }
+
+    public String getFoodGroup() {
+        return foodGroup;
+    }
+
+    public void setFoodGroup(String foodGroup) {
+        this.foodGroup = foodGroup;
     }
 
     private Date getValidDate(String str){

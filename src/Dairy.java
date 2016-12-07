@@ -3,7 +3,6 @@
  */
 public class Dairy extends Item {
     public Dairy(String name, int quantity, double price) {
-        super(name, quantity, price);
-        this.foodGroup = "Dairy";
+        super(name, quantity, price, "Dairy");
     }
 }

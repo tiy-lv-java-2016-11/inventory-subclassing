@@ -88,7 +88,6 @@ public class Inventory {
 
     }
 
-
     private void newItem() {
         
         System.out.println("\nWhat is the name of the item?");
@@ -100,7 +99,7 @@ public class Inventory {
         System.out.println("\nWhat is the price?");
         double price = getValidPrice(this.input.nextLine());
         
-        Item item  = new Item(name, qty, price);
+        Item item  = new Item(name, qty, price, null);
         this.inventory.put(CURRENT_ITEM_ID, item);
         CURRENT_ITEM_ID++;
 
